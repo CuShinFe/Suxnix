@@ -1,0 +1,44 @@
+<section class="sticky top-0 z-50">
+  <header class="bg-white shadow-lg py-5" id="header">
+    <nav
+      class="container lg:max-w-screen-2xl mx-auto flex justify-between items-center px-4"
+    >
+      <div class="min-w-max">
+        <a routerLink="/">
+          <img
+            src="./assets/images/logo/logo.png"
+            class="w-40"
+            alt="suxnix_logo"
+          />
+        </a>
+      </div>
+
+      <ul class="hidden lg:flex space-x-9 xl:space-x-14 Roboto-600">
+        <li
+          *ngFor="let item of menu"
+          class="text-gray-500 hover:text-amber-500"
+        >
+          <a routerLink="{{ item.link }}">{{ item.list }}</a>
+        </li>
+      </ul>
+
+      <div class="space-x-7 lg:space-x-10">
+        <button class="relative hidden xs:inline-block">
+          <i class="las la-shopping-cart text-4xl"></i>
+          <span
+            class="bg-amber-400 rounded-full text-white text-xs Roboto-200 absolute top-1 right-0 px-1"
+            >2</span
+          >
+        </button>
+        <button class="hidden xs:inline-block">
+          <i class="las la-search -rotate-90 text-4xl"></i>
+        </button>
+        <button class="bg-green-600 rounded-full h-14 w-14">
+          <i class="las la-border-all text-3xl text-white"></i>
+        </button>
+      </div>
+    </nav>
+  </header>
+</section>
+
+<!-- reponsive navbar -->

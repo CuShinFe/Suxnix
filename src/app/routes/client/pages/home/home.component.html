@@ -1,0 +1,371 @@
+<section id="home" class="mt-11 mb-40">
+  <div class="relative">
+    <div class="absolute -left-4 top-20 -z-10">
+      <img
+        src="./assets/images/home/banner/banner_shape01.png"
+        alt="shape01"
+        class="w-[50%] sm:w-full"
+      />
+    </div>
+    <div class="absolute right-0 top-48 sm:top-8 -z-10 w-16 sm:w-36">
+      <img
+        src="./assets/images/home/banner/banner_shape02.png"
+        alt="shape01"
+        class="w-full"
+      />
+    </div>
+  </div>
+  <div class="hidden lg:inline-block absolute -z-10 left-10 bottom-0">
+    <img
+      src="./assets/images/home/banner/banner_shape03.png"
+      alt=""
+      class="w-full"
+    />
+  </div>
+  <div class="hidden lg:inline-block absolute right-16 bottom-0">
+    <img
+      src="./assets/images/home/banner/banner_shape04.png"
+      alt=""
+      class="w-full"
+    />
+  </div>
+
+  <!-- logo slider -->
+  <div class="container mx-auto">
+    <!-- text-->
+    <div class="flex justify-center">
+      <div class="grid text-center">
+        <p class="text-amber-500 Roboto-600 tracking-wide">
+          .. INCREASED ENERGY WITH SUXNIX ..
+        </p>
+        <h1
+          class="justify-self-center md:max-w-[68%] xl:max-w-[78%] text-5xl sm:text-6xl lg:text-7xl Oswald-500 mt-6 mb-24 px-4"
+        >
+          MIX PROTEIN PROVIDED WAY TO GROWTH
+        </h1>
+      </div>
+    </div>
+    <!-- banner -->
+    <div class="relative px-10">
+      <a
+        class="text-white Roboto-600 border-4 border-white bg-amber-500 hover:bg-green-600 rounded-full absolute -top-8 left-[50%] -translate-x-[50%] z-10 ease-in duration-400 text-center w-44 py-4"
+      >
+        Shop Now
+      </a>
+    </div>
+    <div class="max-w-screen-lg mx-auto">
+      <img
+        src="./assets/images/home/banner/banner_round_bg.png"
+        alt=""
+        class="w-full px-5"
+      />
+      <img
+        src="./assets/images/home/banner/banner_img01.png"
+        alt=""
+        class="absolute -translate-y-[95%] inset-x-10 mx-auto"
+      />
+    </div>
+  </div>
+
+  <!-- text -->
+  <!-- <div class="mx-auto container px-5">
+    <div class="flex justify-center items-center gap-8 my-10">
+      <div class="border-amber-500 border w-14"></div>
+      <p class="text-center text-slate-600 Roboto-600">
+        PERFECT BRAND IS FEATURED ON
+      </p>
+      <div class="border-amber-500 border w-14"></div>
+    </div>
+    (slider)
+    <div class="flex items-center space-x-32">
+      <div *ngFor="let item of slider">
+        <img src="{{ item }}" alt="img" />
+      </div>
+    </div>
+  </div> -->
+</section>
+
+<!-- Section 2 -->
+<section
+  class="bg-[url('./assets/images/home/bg/features_bg.jpg')] bg-cover bg-center h-full relative"
+>
+  <div
+    class="bg-[url('./assets/images/home/bg/features_shape01.png')] bg-repeat-x -z-10 h-full w-full absolute -top-10"
+  ></div>
+
+  <div
+    class="container mx-auto md:flex justify-center items-center sm:space-x-12 space-y-12 text-white Roboto-400 py-14"
+  >
+    <div class="sm:w-[512px] block md:hidden mx-auto">
+      <img
+        src="./assets/images/home/bg/features_img.png"
+        alt=""
+        class="w-full"
+      />
+    </div>
+    <div
+      class="md:w-1/2 grid grid-cols-1 sm:grid-cols-2 items-center text-center sm:text-start leading-6 gap-16"
+    >
+      <div
+        *ngFor="let item of listicon"
+        class="px-4 xs:px-12 sm:px-0 pt-8 sm:pt-0"
+      >
+        <i class="{{ item.icon }} text-6xl text-yellow-400"></i>
+        <h4 class="uppercase text-xl Oswald-500 mb-3 mt-3">{{ item.h4 }}</h4>
+        <p class="lg:pr-12">{{ item.text }}</p>
+      </div>
+    </div>
+    <div class="w-1/2 min-w-min sm:w-[512px] hidden md:inline-block">
+      <img
+        src="./assets/images/home/bg/features_img.png"
+        alt=""
+        class="w-full"
+      />
+    </div>
+  </div>
+
+  <div
+    class="bg-[url('./assets/images/home/bg/features_shape02.png')] bg-repeat-x -z-10 h-full w-full absolute"
+  ></div>
+</section>
+
+<!-- Section3 -->
+<section class="my-52">
+  <div *ngFor="let item of section3">
+    <div
+      class="container mx-auto mb-20 flex flex-col md:flex-row justify-center gap-14"
+    >
+      <div class="md:w-1/2 group relative">
+        <img
+          src="./assets/images/home/products/features_product_dots.png"
+          alt=""
+          class="absolute md:-translate-y-28 w-[80%] md:w-full"
+        />
+        <img
+          src="{{ item.img1 }}"
+          alt="features_product01"
+          class="relative z-10 mx-auto"
+          [ngClass]="{
+            'pl-32 pr-12': item.style === 1,
+            'pl-12 pr-32': item.style === 2
+          }"
+        />
+        <img
+          src="{{ item.img2 }}"
+          alt="product_shape_01"
+          class="absolute bottom-2 duration-700"
+          [ngClass]="{
+            'left-[5%] xs:left-[13%] group-hover:left-[15%]': item.style === 1,
+            'right-[5%] xs:right-[18%] group-hover:right-[21%]':
+              item.style === 2
+          }"
+        />
+      </div>
+
+      <div
+        class="Roboto-400 text-center md:text-start xl:text-justify md:w-1/2"
+        [ngClass]="{
+          'md:pr-20 lg:pr-40': item.style === 1,
+          'md:pl-20 lg:pl-40 md:order-first': item.style === 2
+        }"
+      >
+        <a
+          class="text-5xl Oswald-500 hover:text-amber-500 duration-700"
+          href="/"
+          >{{ item.name }}</a
+        >
+        <img
+          src="./assets/images/home/products/title_shape.svg"
+          alt=""
+          class="my-6 mx-auto md:mx-0"
+        />
+        <p class="Roboto-500">High-strength, 5000IU</p>
+        <p class="text-gray-500 mb-14 px-6 xs:px:16 sm:px-28 md:px-0 pt-5">
+          {{ item.information }}
+        </p>
+        <div
+          class="flex flex-col xs:flex-row justify-center md:justify-start items-center gap-4 xs:gap-10 Oswald-700 mx-8 md:mx-0"
+        >
+          <a
+            class="text-white Roboto-600 hover:bg-amber-500 bg-green-600 rounded-full ease-in duration-400 px-12 py-4"
+          >
+            Shop Now
+          </a>
+          <div>
+            <span class="text-2xl pr-6">{{ item.price }}</span>
+            <span class="text-xl text-amber-500">{{ item.oldprice }}</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Section3: Slider -->
+<section class="max-w-screen-2xl mx-auto relative text-4xl">
+  <!-- <button
+    class="bg-green-600 rounded-full h-12 w-12 opacity-25 hover:opacity-100 duration-700 absolute left-4 top-[50%] -translate-y-[50%]"
+  >
+    <i class="las la-long-arrow-alt-left"></i>
+  </button>
+  <button
+    class="bg-green-600 rounded-full h-12 w-12 opacity-25 hover:opacity-100 duration-700 absolute right-4 top-[50%] -translate-y-[50%]"
+  >
+    <i class="las la-long-arrow-alt-right"></i>
+  </button> -->
+
+  <div
+    class="container mx-auto grid grid-cols-1 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5"
+  >
+    <div *ngFor="let item of slider3" class="text-xl shadow-xl p-10">
+      <div class="relative">
+        <span
+          class="bg-red-500 text-white text-xs Roboto-600 rounded-sm px-2 py-1 absolute -top-32 -right-11"
+          [ngClass]="{
+            invisible: item.bg === 'bg-lime-500',
+            visible: item.bg === 'bg-violet-500'
+          }"
+          >-15%</span
+        >
+        <div
+          class="{{ item.bg }} rounded-bl-full rounded-br-full h-20 w-full"
+        ></div>
+        <img
+          src="{{ item.img }}"
+          alt=""
+          class="mx-auto absolute left-1/2 -translate-x-1/2 -top-28 h-44 min-w-[120px]"
+        />
+      </div>
+
+      <h5 class="uppercase Oswald-500">protein powder 2kg</h5>
+      <p class="Oswald-700">$59.99</p>
+      <i *ngFor="let star of starIcon" class="text-amber-500 {{ star }}"></i>
+      <span class="text-base text-slate-400 Roboto-500"
+        >({{ item.rating }})</span
+      >
+      <button></button>
+      <button></button>
+    </div>
+  </div>
+</section>
+
+<!-- Section 4 -->
+<section class="bg-black relative my-20">
+  <img
+    src="./assets/images/home/bg/video_bg.jpg"
+    alt=""
+    class="opacity-30 object-cover object-center w-full"
+  />
+  <img
+    src="./assets/images/home/bg/video_top_mask.png"
+    alt="top_mask"
+    class="absolute top-0 z-10 w-full"
+  />
+  <img
+    src="./assets/images/home/bg/video_bottom_mask.png"
+    alt="bottom_mask"
+    class="w-full absolute bottom-0"
+  />
+  <img
+    src="./assets/images/home/bg/video_shape01.png"
+    class="absolute -bottom-24 z-10 w-24 sm:w-32"
+  />
+  <img
+    src="./assets/images/home/bg/video_shape02.png"
+    class="absolute -bottom-8 right-0 z-10 w-24 sm:w-36"
+  />
+  <button
+    class="bg-green-600 rounded-full p-11 absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2"
+  >
+    <i class="las la-play text-5xl text-white"></i>
+  </button>
+</section>
+
+<!-- Section 7 -->
+<section class="bg-slate-50 text-center uppercase Roboto-600 py-40">
+  <div class="container mx-auto">
+    <p class="text-amber-500 Roboto-500">.. SUXNIX PLANS ..</p>
+    <h5 class="text-5xl Oswald-500 mt-6 mb-16">SUPPLEMENT PACKAGES</h5>
+
+    <div
+      class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-7 mx-4 xs:mx-14"
+    >
+      <div *ngFor="let item of section7" class="group">
+        <div
+          class="text-lg Oswald-500 text-white group-hover:bg-amber-500 rounded-lg mb-3 py-2"
+          [ngClass]="{
+            invisible: item.style === 1,
+            visible: item.style === 2,
+            'bg-gray-500': item.tag == 'most popular',
+            'bg-amber-500': item.tag === 'best value'
+          }"
+        >
+          <i
+            class="las"
+            [ngClass]="{
+              'la-star': item.tag == 'most popular',
+              'la-check text-2xl': item.tag == 'best value'
+            }"
+          ></i>
+          {{ item.tag }}
+          <i
+            class="las la-star"
+            [ngClass]="{ hidden: item.tag == 'best value' }"
+          ></i>
+        </div>
+        <div
+          class="bg-white border-2 hover:border-amber-500 duration-500 rounded-2xl p-9"
+          [ngClass]="{ 'border-amber-500': item.tag === 'best value' }"
+        >
+          <p class="text-xl">{{ item.number }} bottle of</p>
+          <h6 class="text-4xl Oswald-700 my-1">Suxnix</h6>
+          <p class="text-lg normal-case">
+            ({{ item.number }} X 250 Veggie Caps Bottle)
+          </p>
+          <img
+            src="./assets/images/home/princing/pricing_01.png"
+            alt=""
+            class="w-28 mx-auto my-8"
+          />
+          <div
+            class="flex justify-center items-center space-x-2 group-hover:text-amber-500 duration-500"
+          >
+            <span
+              class="text-5xl Oswald-700"
+              [ngClass]="{ 'text-amber-500': item.tag === 'best value' }"
+              >{{ item.price }}</span
+            >
+            <span
+              class="capitalize text-slate-500 text-start Roboto-500 h-full leading-5"
+              >per <br />
+              bottle</span
+            >
+          </div>
+          <p class="text-slate-500 Oswald-600 text-xl mt-2 mb-3">
+            ({{ item.total }})
+          </p>
+          <p class="text-3xl Oswald-600 text-amber-500 mb-1">
+            save {{ item.save }}
+          </p>
+          <p
+            class="text-amber-500 text-xl normal-case"
+            [ngClass]="{
+              invisible: item.style === 1,
+              visible: item.style === 2
+            }"
+          >
+            + Free Shipping
+          </p>
+
+          <a
+            routerLink="/"
+            class="block border border-amber-500 bg-amber-500 hover:bg-white text-white text-2xl Roboto-600 hover:text-amber-500 rounded-xl py-3 mt-3"
+          >
+            Buy now
+            <p class="text-xs mt-1">365 day full money back guaranteed</p></a
+          >
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

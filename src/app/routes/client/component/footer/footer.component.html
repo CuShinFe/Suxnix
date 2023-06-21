@@ -1,0 +1,87 @@
+<footer class="bg-black relative mt-48">
+  <img
+    src="./assets/images/footer/footer_bg_shape.png"
+    alt="bg_footer_shape"
+    class="w-full"
+  />
+
+  <div
+    class="-scale-x-100 sm:scale-x-100 w-14 absolute -right-4 sm:left-0 bottom-32 mr-4"
+  >
+    <img
+      class="w-full"
+      src="./assets/images/footer/footer_shape01.png"
+      alt="footer_shape01"
+    />
+  </div>
+  <div class="w-20 absolute right-0 bottom-96 sm:bottom-52 ml-4">
+    <img
+      class="w-full"
+      src="./assets/images/footer/footer_shape02.png"
+      alt="footer_shape01"
+    />
+  </div>
+
+  <section class="container mx-auto px-5">
+    <div
+      class="grid grid-cols-2 xs:grid-cols-3 sm:grid-cols-4 lg:grid-cols-5 absolute -top-32 px-1"
+    >
+      <div *ngFor="let item of images">
+        <img src="{{ item.image }}" alt="image" />
+      </div>
+    </div>
+
+    <div class="px-4 pb-10 pt-44">
+      <div
+        class="grid grid-cols-1 xs:grid-cols-2 sm:grid-cols-3 md:grid-cols-4 justify-self-stretch sm:justify-items-center space-y-9 xs:space-y-5 text-gray-400 Roboto-500 leading-8"
+      >
+        <div class="xs:mr-10 sm:mr-0">
+          <img class="w-44" src="./assets/images/logo/white_logo.png" alt="" />
+          <p class="py-8">
+            Making beauty especially relating complot especial common questions
+            tend to recur through posts or queries standards vary orem donor
+            command tei.
+          </p>
+          <button
+            *ngFor="let item of icons"
+            class="z-50 h-10 w-10 hover:bg-green-600 rounded-full drop-shadow-xl bg-slate-800 ease-ini duration-1000 mr-2"
+          >
+            <i class="{{ item }} text-xl text-white"></i>
+          </button>
+        </div>
+
+        <div *ngFor="let item of list2" class="pl-10 xs:pl-0">
+          <h3 class="uppercase Oswald-500 text-xl text-white pb-6">
+            {{ item.h3 }}
+          </h3>
+          <a
+            *ngFor="let item2 of item.texts"
+            class="hover:text-green-600 block ease-in duration-500"
+            >{{ item2.text }}</a
+          >
+        </div>
+
+        <div class="text-white pl-20 xs:pl-0">
+          <h3 class="uppercase Oswald-500 text-xl pb-6">Contact Us</h3>
+          <p class="text-gray-400">
+            4140 Parker Rd. Allentown, New Mexico 31134
+          </p>
+          <a *ngFor="let item of list" class="flex gap-3">
+            <i class="{{ item.icon }} text-2xl text-green-600"></i>
+            <p>{{ item.text3 }}</p>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="border-t border-gray-800">
+    <div
+      class="container mx-auto flex flex-wrap sm:flex-nowrap justify-center sm:justify-between space- gap-4 text-white Roboto-400 px-4 py-3 sm:py-7"
+    >
+      <p>Copyright © 2022 Suxnix All Rights Reserved.</p>
+      <img src="./assets/images/footer/card_img.png" alt="card_img" />
+    </div>
+  </section>
+</footer>
+
+<!-- [ngClass]="{'hidden lg:inline-block': item.style ==1, 'hidden sm:inline-block': item.style ==2, 'hidden xs:inline-block': item.style ==3, 'inline-block': item.style ==4}" -->
